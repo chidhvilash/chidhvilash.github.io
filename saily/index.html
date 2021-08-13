@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saily | Originals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Noto Sans', sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+
+        .header-container{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header-logo{
+            flex: 1;
+        }
+
+        .header-search{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-search input{
+            width: 90%;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 15px;
+            font-size: 15px;
+            font-family: 'Noto Sans';
+            outline: none;
+        }
+
+        .header-search input[type=text]:focus{
+            border: #0075FF 2px solid;
+        }
+
+        .header-search button{
+            background-color: white;
+            border: none;
+            padding-top: 5px;
+        }
+        .header-search button:hover{
+            cursor: pointer;
+        }
+        .header-login{
+            flex: 1;
+            display: flex;
+            justify-content: end;
+        }
+
+        .login-button{
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            border: solid rgb(0, 0, 0) 2px;
+            padding: 5px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .login-button-mob{
+            display: none;
+        }
+
+        .login-button:hover{
+            background-color: tomato;
+            color: rgb(255, 255, 255);
+            border: tomato solid 2px;
+        }
+        .header-search-mob{
+            display: none;
+        }
+
+        @media(max-width:720px){
+            .header-logo{
+                flex: 1;
+            }
+            .header-login{
+                flex:2;
+            }
+            .header-search{
+                display: none;
+            }
+            .header-search-mob{
+                display: flex;
+                padding-top: 15px;
+                justify-content: center;
+                margin: auto;  
+            }
+            .header-search-mob input{
+                width: 80%;
+                border: 2px solid rgb(0, 0, 0);
+                border-radius: 15px;
+                font-size: 15px;
+                font-family: 'Noto Sans';
+                outline: none;
+            }
+            .header-search-mob input[type=text]:focus{
+                border: #0075FF 2px solid;
+            }
+            .header-search-mob button{
+                background-color: white;
+                border: none;
+                padding-top: 5px;
+            }
+            .header-search-mob button:hover{
+                cursor: pointer;
+            }
+            .login-button{
+                display: none;
+            }
+            .login-button-mob{
+                display: flex;
+                font-size: 15px;
+                color: rgb(0, 0, 0);
+                border: solid rgb(0, 0, 0) 2px;
+                padding: 5px;
+                border-radius: 5px;
+                text-align: center;
+            }
+            .login-button-mob:hover{
+            background-color: tomato;
+            color: rgb(255, 255, 255);
+            border: tomato solid 2px;
+        }
+        }
+
+        .container{
+            width: 90%;
+            margin: auto;
+        }
+
+        .main-heading{
+            text-align: center;
+            
+        }
+
+        .main-heading a:hover, .relode a:hover{
+            color: white;
+            background-color: #1381ff;
+        }
+
+        .main-box{
+            display: flex;
+            justify-content: center;
+        }
+
+        .box{
+            flex: 1;
+            width: 33.3%;
+            display: flex;
+            border: black 2px solid;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: black 4px 3px;
+        }
+
+        .saily-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .article-rate{
+            flex: 1;
+        }
+
+        @media(max-width:985px){
+            .main-box{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            }
+            .box{
+            flex: 1;
+            width: 100%;
+            display: flex;
+            border: black 2px solid;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: black 4px 3px;
+        }
+        }
+
+        .relode h1, .relode p{
+            text-align: center;
+        }
+
+        
+
+        .relode h1 a, .main-heading h2 a{
+            box-shadow: #0075FF 0px 3px;
+        }
+        
+        .article-source small em{
+            font-weight: lighter;
+            font-style: normal;
+            color: #0075FF;
+        }
+
+        .article-source small em:hover{
+            background-color: #0075FF;
+            color: white;
+        }
+
+        .article-image img{
+            transition: all 0.3s;
+            transform: scale(1);
+        }
+        .article-image img:hover{
+            transform: scale(1.05);
+        }
+
+        footer{
+            background-color: rgb(180, 180, 180);
+            text-align: center;
+            width: 100%;
+            margin: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        footer ul li{
+            display: inline-block;
+            padding-left: 20px;
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo felx-mob">
+                <a href="https://news.saily.org"><img src="./saily-news.png" alt="Saily-logo"></a>
+            </div>
+            <div class="header-search">
+                <input type="text" list="search-menu">
+                <button><img src="./search.png" alt="">
+                </button>
+            </div>
+            <div class="header-login">
+                <a href=""><div class="login-button">
+                   Saily Originals
+                </div></a>
+                <a href=""><div class="login-button-mob">
+                   Originals
+                 </div></a>
+            </div>
+        </div>
+    </header>
+    <div class="header-search-mob" id="search-menu">
+        <input type="text"><button><img src="./search.png" alt="">
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="main-heading">
+            <h2><a href="news.saily.org/Positive">Positive</a></h2>
+        </div>
+        <div class="main-box">
+            <div class="box">
+                <div class="article-title">
+                    <h3>This is the title of the article</h3>
+                </div>
+                <div class="article-source">
+                    <small>Source : <em>ANI India</em></small>
+                </div>
+                <div class="article-image">
+                    <img src="./demo.jpeg" alt="" width="100%">
+                </div>
+                <div class="article-description">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur, sed quis temporibus eaque similique dolorem cumque nesciunt! Nam, ea?</p>
+                </div>
+                <div class="saily-container">
+                    <div class="article-rate">
+                        +ve Rate: 99%
+                    </div>
+                    <div class="article-audio">
+                        <img src="./Play button.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="article-title">
+                    <h3>This is the title of the article</h3>
+                </div>
+                <div class="article-source">
+                    <small>Source : ANI India</small>
+                </div>
+                <div class="article-image">
+                    <img src="./demo.jpeg" alt="" width="100%">
+                </div>
+                <div class="article-description">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur, sed quis temporibus eaque similique dolorem cumque nesciunt! Nam, ea?</p>
+                </div>
+                <div class="saily-container">
+                    <div class="article-rate">
+                        +ve Rate: 99%
+                    </div>
+                    <div class="article-audio">
+                        <img src="./Play button.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="article-title">
+                    <h3>This is the title of the article</h3>
+                </div>
+                <div class="article-source">
+                    <small>Source : ANI India</small>
+                </div>
+                <div class="article-image">
+                    <img src="./demo.jpeg" alt="" width="100%">
+                </div>
+                <div class="article-description">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur, sed quis temporibus eaque similique dolorem cumque nesciunt! Nam, ea?</p>
+                </div>
+                <div class="saily-container">
+                    <div class="article-rate">
+                        +ve Rate: 99%
+                    </div>
+                    <div class="article-audio">
+                        <img src="./Play button.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- This ends the container -->
+    </div>
+    <div class="relode">
+        <p>Top Stories ended. Relode for new top Stories</p>
+        <h1><a href="https://news.saily.org">Relode</a></h1>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="https://saily.org/aboutus">About Us</a></li>
+            <li><a href="https://saily.org/privacy">Privacy</a></li>
+            <li><a href="https://saily.org/terms">Terms</a></li>
+            <li><a href="https://saily.org/ads">Ads</a></li>
+            <li>&copy; Saily,Inc 2021</li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
